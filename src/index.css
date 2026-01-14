@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: #e5e7eb;
+}
+
+/* App */
+.app {
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(2, 6, 23, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.25);
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #38bdf8;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+/* Mobile Menu*/
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #020617;
+  border-top: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+.mobile-menu button {
+  padding: 14px 24px;
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  text-align: left;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.mobile-menu button:hover {
+  background: rgba(56, 189, 248, 0.1);
+}
+
+/*Hero Section*/
+.hero {
+  padding: 160px 8% 120px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  color: #38bdf8;
+}
+
+.hero-subtitle {
+  margin-top: 12px;
+  font-size: 1.4rem;
+  color: #cbd5f5;
+}
+
+.hero-text {
+  margin: 20px auto 0;
+  max-width: 750px;
+  color: #94a3b8;
+}
+
+.hero-actions {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.primary-btn {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+}
+
+.secondary-btn {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.secondary-btn:hover {
+  background: #334155;
+}
+
+/* Sections */
+.section {
+  padding: 110px 8%;
+}
+
+.section-dark {
+  background: rgba(30, 41, 59, 0.35);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 60px;
+  color: #38bdf8;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 30px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Card */
+.card {
+  background: #020617;
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(56, 189, 248, 0.25);
+}
+
+.card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #cbd5f5;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+/* Tags */
+.tags {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
+
+/* List */
+.list {
+  margin-top: 14px;
+  list-style: none;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.list li {
+  margin-bottom: 6px;
+}
+
+/* Footer */
+.footer {
+  padding: 40px 20px;
+  background: #020617;
+  border-top: 1px solid rgba(56, 189, 248, 0.25);
+  text-align: center;
+}
+
+.footer p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.footer-icons {
+  margin: 18px 0;
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+}
+
+.footer-icons a {
+  color: #e5e7eb;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #38bdf8;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .section {
+    font-size: 90px 6%;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    font-size: 0.9rem;
+    padding: 12px 24px;
+  }
+}
