@@ -22,21 +22,21 @@ const Portfolio = () => {
     {
       title: "ChestDx",
       subtitle: "AI/ML Based Chest X-ray Classification",
-      description: "Developed an intelligent diagnostic system using deep learning to classify chest X-rays into COVID-19, Pneumonia, and Normal categories. Implemented CNN model training, testing, and evaluation using TensorFlow and Keras, achieving strong accuracy and interpretability.",
+      description: "Developed an intelligent diagnostic system using deep learning to classify chest X-rays into COVID-19, Pneumonia, and Normal categories. Implemented CNN model training, testing, and evaluation using TensorFlow and Keras, achieving strong accuracy and interpretability. Integrated a Django-based web interface for real-time prediction and patient data management.",
       tech: ["Python", "TensorFlow", "Keras", "Django", "Deep Learning"],
       highlights: ["Real-time prediction", "Patient data management", "High accuracy classification"]
     },
     {
       title: "Expense Tracker",
       subtitle: "Full-Stack Web Application",
-      description: "Built a comprehensive expense tracking application with React frontend and Django backend. Features include expense categorization, budget management, data visualization, and detailed financial reports with secure user authentication.",
+      description: "Built a comprehensive expense tracking application with React frontend and Django backend. Features include expense categorization, budget management, data visualization, and detailed financial reports.",
       tech: ["React", "Django", "SQL", "REST API", "JavaScript"],
       highlights: ["Real-time tracking", "Data visualization", "Secure authentication"]
     },
     {
       title: "TrekNepal",
       subtitle: "Web-based Trek Information Platform",
-      description: "Designed and developed a responsive website to provide trekking routes, preparation tips, and safety information for adventure enthusiasts in Nepal. Focused on clean UI, responsive design, and interactive content delivery.",
+      description: "Designed and developed a responsive website using HTML, CSS, and JavaScript to provide trekking routes, preparation tips, and safety information for adventure enthusiasts in Nepal. Focused on clean UI, responsive design, and interactive content delivery.",
       tech: ["HTML", "CSS", "JavaScript", "Responsive Design"],
       highlights: ["Interactive UI", "Comprehensive trek info", "Mobile-friendly"]
     }
@@ -47,37 +47,54 @@ const Portfolio = () => {
     "Web Development": ["HTML", "CSS", "JavaScript", "Django", "React"],
     "Mobile Development": ["Flutter", "Dart"],
     "Tools & Technologies": ["TensorFlow", "Scikit-learn", "Git", "AWS", "IoT Systems"],
-    "Soft Skills": ["Communication", "Problem Solving", "Time Management", "Team Collaboration"]
+    "Soft Skills": ["Communication", "Problem Solving", "Time Management", "Adaptability", "Team Collaboration"]
   };
+
+  const certifications = [
+    {
+      title: "AWS Certified Solutions Architect",
+      issuer: "Amazon Web Services",
+      date: "2025",
+      credentialId: "AWS-SA-123456",
+      description: "Gained knowledge of cloud architecture, deployment, and service management using AWS"
+    },
+    {
+      title: "Certificate of Completion of Python and Data Science Training",
+      issuer: "Sipalaya Infotech",
+      date: "2025",
+      credentialId: "PDS-789012",
+      description: "Gained valuable insights on data handling and various AI/ML models related to data processing"
+    }
+  ];
 
   const workshops = [
     {
       title: "Python and Data Science Training",
       organizer: "Sipalaya Infotech",
       duration: "3 Months",
-      date: "August - November 2025",
-      description: "Comprehensive training in Python libraries, SQL Workbench, and AI/ML models"
+      date: "August 20 - November 20, 2025",
+      description: "Understood the concepts and working of various Python libraries, SQL Workbench and AI/ML models and libraries"
     },
     {
       title: "IoT Workshop",
       organizer: "NCIT",
       duration: "3 Days",
       date: "June 2-4, 2025",
-      description: "Hands-on experience with sensors, microcontrollers, and IoT systems"
+      description: "Worked with sensors, microcontrollers, and IoT data communication systems"
     },
     {
       title: "Django Workshop",
       organizer: "Nepal Tek Community",
       duration: "3 Days",
       date: "May 2-4, 2025",
-      description: "Built dynamic web applications with backend integration"
+      description: "Built dynamic web applications with backend integration and authentication"
     },
     {
       title: "Flutter Workshop",
       organizer: "Nepal Tek Community",
       duration: "2 Days",
       date: "February 2-3, 2025",
-      description: "Developed cross-platform mobile apps using Flutter"
+      description: "Developed cross-platform mobile apps using Flutter and Dart"
     }
   ];
 
@@ -98,7 +115,7 @@ const Portfolio = () => {
           <h1 className="logo">Shatansh Adhikari</h1>
 
           <div className="nav-links">
-            {["home", "about", "projects", "skills", "training"].map(
+            {["home", "about", "projects", "skills", "certifications", "training"].map(
               (section) => (
                 <button
                   key={section}
@@ -123,7 +140,7 @@ const Portfolio = () => {
 
         {isMenuOpen && (
           <div className="mobile-menu">
-            {["home", "about", "projects", "skills", "training"].map(
+            {["home", "about", "projects", "skills", "certifications", "training"].map(
               (section) => (
                 <button
                   key={section}
@@ -178,7 +195,7 @@ const Portfolio = () => {
           <div className="card">
             <h3>Contact</h3>
             <p>
-              <Mail size={16} /> shatanshadh@gmail.com
+              <a href="mailto:shatanshadh@gmail.com" style={{color: 'inherit', textDecoration: 'none'}}><Mail size={16} /> shatanshadh@gmail.com</a>
             </p>
             <p>
               <Phone size={16} /> 9841429613
@@ -189,7 +206,7 @@ const Portfolio = () => {
           </div>
         </div>
 
-        <div className="grid grid-3">
+        <div className="grid grid-3 interests-grid">
           {interests.map((item, i) => (
             <div key={i} className="card">
               {item.icon}
@@ -246,6 +263,20 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* CERTIFICATIONS */}
+      <section id="certifications" className="section section-dark">
+        <h2 className="section-title">Certifications</h2>
+
+        {certifications.map((cert, i) => (
+          <div key={i} className="card">
+            <h3>{cert.title}</h3>
+            <p><strong>{cert.issuer}</strong> • {cert.date}</p>
+            <p>Credential ID: {cert.credentialId}</p>
+            <p>{cert.description}</p>
+          </div>
+        ))}
       </section>
 
       {/* EXPERIENCE */}

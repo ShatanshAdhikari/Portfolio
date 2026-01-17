@@ -185,6 +185,10 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
+.interests-grid {
+  gap: 40px;
+}
+
 /* Card */
 .card {
   background: #020617;
@@ -194,8 +198,9 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-8px);
+.card:hover,
+.card:focus {
+  transform: scale(1.02);
   box-shadow: 0 15px 40px rgba(56, 189, 248, 0.25);
 }
 
