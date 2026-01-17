@@ -31,7 +31,7 @@ const Portfolio = () => {
       subtitle: "Full-Stack Web Application",
       description: "Built a comprehensive expense tracking application with React frontend and Django backend. Features include expense categorization, budget management, data visualization, and detailed financial reports.",
       tech: ["React", "Django", "SQL", "REST API", "JavaScript"],
-      highlights: ["Real-time tracking", "Data visualization", "Secure authentication"]
+      highlights: ["Real-time tracking", "Data visualization", "Expense categorization"]
     },
     {
       title: "TrekNepal",
